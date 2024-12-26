@@ -48,7 +48,7 @@ const Dynamicpage = () => {
   return (
     <div className="px-[48px] py-[36px] bg-[#fcf0f0]">
       <div className="flex flex-col lg:flex-row lg:justify-between shadow-lg bg-[#fff6f6]">
-        <div className="w-full lg:w-[370px] lg:h-[400px] bg-blue-600 rounded-md">
+        <div className="w-full lg:w-[370px] lg:h-[400px]  rounded-md">
           <Image
             src={productImage}
             alt="product-images"
@@ -94,8 +94,8 @@ const Dynamicpage = () => {
             submittedValue.map((value, i) => (
               <div key={i} className="flex justify-between items-center border-b py-2 w-full ">
 
-                <p className="flex-1 bg-yellow-400 w-full max-w-[1200px] break-words ">{value}</p>
-                <Button content={"delete"} className={"bg-red-600"} onClick={() => deleteHandler(i)} />
+                <p className="flex-1  w-full max-w-[1200px] break-words ">{value}</p>
+                <Button content={"delete"} className={""} onClick={() => deleteHandler(i)} />
               </div>
             ))
           ) : (
