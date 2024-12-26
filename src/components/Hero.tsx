@@ -5,18 +5,18 @@ import React from 'react'
 
 const Hero = () => {
   return (
-    <div className='w-full h-screen max-w-[1200px] bg-yellow-300 '>
-      <div className='relative w-full h-full bg-black'>
+    <div className='w-full h-screen  '>
+
         <Image
           src="/images2/hero2.jpg"
           alt="hero-image"
-          width={300}
-          height={300}
+          width={600}
+          height={600}
          
           className='w-full h-full object-cover'
         />
       
-      </div>
+    
 
 
     </div>

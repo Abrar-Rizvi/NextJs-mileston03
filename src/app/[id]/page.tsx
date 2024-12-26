@@ -52,7 +52,7 @@ const Dynamicpage = () => {
           <Image
             src={productImage}
             alt="product-images"
-            // layout="fill"
+            // layout="responsive"
             width={600} // Aspect ratio width
             height={600} // Aspect ratio height
             // objectFit="cover"
