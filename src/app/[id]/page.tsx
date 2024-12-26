@@ -1,14 +1,15 @@
 "use client";
 
 import Button from "@/components/Button";
-import { products } from "@/Data";
+import { IProduct, products } from "@/Data";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
 
+
 const Dynamicpage = () => {
   const params = useParams();
-  const [foundProduct, setFoundProduct] = useState<any>(null);
+  const [foundProduct, setFoundProduct] = useState<IProduct | null>(null);
   const [username, setusername] = useState<string>("");
   const [submittedValue, setSubmittedValue] = useState<string[]>([]);
 
@@ -16,7 +17,8 @@ const Dynamicpage = () => {
     const fetchProduct = () => {
       const id = params.id;
       const product = products.find((product) => product.id === Number(id));
-      setFoundProduct(product);
+      setFoundProduct(product ?? null);
+      console.log(product)
     };
     fetchProduct();
   }, [params]);
@@ -53,16 +55,16 @@ const Dynamicpage = () => {
             // layout="fill"
             width={600} // Aspect ratio width
             height={600} // Aspect ratio height
-            objectFit="cover"
+            // objectFit="cover"
             className="object-cover w-full h-full rounded-md"
           />
         </div>
         <div className="w-full lg:w-[60%] py-5">
           <h1 className="w-[70%] sm:text-xl md:text-2xl lg:text-[28px] font-bold text-[#c8896a]">
-            {foundProduct.longHeading}
+            {foundProduct?.longHeading}
           </h1>
           <p className="w-[90%] sm:text-[18px] md:text-[22px] text-[#6a9ac8] lg:text-[24px]">
-            {foundProduct.description}
+            {foundProduct?.description}
           </p>
         </div>
       </div>
