@@ -33,7 +33,7 @@ const Dynamicpage = () => {
 
   const productImage = foundProduct?.imageUrl || "/fallback-image.jpg";
 
-  const submitHandler = (e: any) => {
+  const submitHandler = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (username.trim()) {
       setSubmittedValue([...submittedValue, username]);
