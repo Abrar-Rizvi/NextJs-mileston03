@@ -10,7 +10,7 @@ const dancingScript = Dancing_Script({
 
 const Header = () => {
   return (
-    <div className='w-full h-[50px] max-w-[1200px] bg-[#c8896a] py-2 flex justify-around items-center'>
+    <div className='w-full h-[50px]  bg-[#c8896a] py-2 flex justify-around items-center'>
         <Logo />
         <h1 className={`sm:text-xl md:text-2xl lg:text-3xl font-bold text-white ${dancingScript.className}`}>Your Blog for All Things Lifestyle & Tech!</h1>
     </div>

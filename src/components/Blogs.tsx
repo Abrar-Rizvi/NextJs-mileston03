@@ -8,7 +8,7 @@ import Link from "next/link"
 
 const Blogs = () => {
     return (
-        <div className="w-full h-auto max-w-[1200px]  flex flex-col bg-[#fcf0f0] pt-[100px]">
+        <div className="w-full h-auto   flex flex-col bg-[#fcf0f0] pt-[100px]">
 
             <h1 className="text-[#ccad61] mb-[30px] text-center text-xl sm:text-[24px] md:text-[26px] lg:text-[28px] font-bold">Explore Our Diverse Collection</h1>
 
