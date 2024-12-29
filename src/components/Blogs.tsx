@@ -1,8 +1,9 @@
 import { products } from "@/Data"
-import Image from "next/image"
+
 
 
 import Link from "next/link"
+import Imagecomponent from "./Image"
 
 
 
@@ -14,32 +15,28 @@ const Blogs = () => {
 
             <div className="flex justify-evenly flex-wrap md:flex-row md:justify-center gap-5">
                 {products.map((product) => {
-                    return   <div key={product.id} className="w-[40%]  md:w-[20%] h-[250px]   bg-[#fff6f6] rounded-md shadow-lg hover:shadow-lg transition-shadow duration-300 ">
-                            {/* This is image  */}
-                            <Link href={`/${product.id}`}>
-                           
-                            <Image
+                    return <div key={product.id} className="w-[40%]  md:w-[20%] h-[250px]   bg-[#fff6f6] rounded-md shadow-lg hover:shadow-lg transition-shadow duration-300 ">
+                        {/* This is image  */}
+                        <Link href={`/${product.id}`}>
+                            <Imagecomponent
                                 src={product.imageUrl}
                                 alt="product-image"
                                 width={300}
                                 height={300}
-                              
-                              
-                              
-                                className=" rounded-md h-[70%] object-cover"
+                                className=" rounded-md h-[70%] w-full object-cover"
                             />
-                          
+
                             <div className="mt-1">
                                 <h4 className="text-[#ccad61] mb-[3px] font-bold sm:text-xl">{product.smallHeading}</h4>
                                 <p className="text-[#ccad61] ">{product.price}</p>
                             </div>
-                            </Link>
+                        </Link>
 
 
 
 
-                        </div>
-                   
+                    </div>
+
                 })}
             </div>
         </div>

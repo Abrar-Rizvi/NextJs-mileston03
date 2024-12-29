@@ -2,9 +2,10 @@
 
 import Button from "@/components/Button";
 import { IProduct, products } from "@/Data";
-import Image from "next/image";
+
 import { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
+import Imagecomponent from "@/components/Image";
 
 
 const Dynamicpage = () => {
@@ -48,14 +49,12 @@ const Dynamicpage = () => {
   return (
     <div className="px-[48px] py-[36px] bg-[#fcf0f0]">
       <div className="flex flex-col lg:flex-row lg:justify-between shadow-lg bg-[#fff6f6]">
-        <div className="w-full lg:w-[370px] lg:h-[400px]  rounded-md">
-          <Image
+        <div className="w-full lg:w-[370px] lg:h-[400px]  rounded-md bg-blue-600">
+          <Imagecomponent
             src={productImage}
             alt="product-images"
-            // layout="responsive"
-            width={600} // Aspect ratio width
-            height={600} // Aspect ratio height
-            // objectFit="cover"
+            width={600}
+            height={600}
             className="object-cover w-full h-full rounded-md"
           />
         </div>
